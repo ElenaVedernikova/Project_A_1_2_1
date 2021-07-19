@@ -7,12 +7,10 @@ branches:
     - master
 
 build: off
-before_install:
-  - chmod +x gradlew
 
 install:
 
   - java -jar ./artifacts/app-mbank.jar &
 
 build_script:
-  - ./gradlew test --info
+  - chmod +x ./gradlew test --info
