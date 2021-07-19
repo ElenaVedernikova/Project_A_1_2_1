@@ -13,4 +13,6 @@ install:
   - java -jar ./artifacts/app-mbank.jar &
 
 build_script:
-  - chmod +x ./gradlew test --info
+  - name: Change wrapper permissions
+      run: chmod +x ./gradlew
+  - ./gradlew test --info
